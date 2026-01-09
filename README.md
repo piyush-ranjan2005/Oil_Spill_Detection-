@@ -57,6 +57,29 @@ Download SNAP: https://step.esa.int/main/download/
 
 The following standard SAR preprocessing pipeline was applied to all Sentinel-1 scenes:
 
+(What to do)
+SNAP Pipeline:
+1. Apply Orbit File
+2. Remove Thermal Noise
+3. Radiometric Calibration (σ⁰)
+4. Speckle Filtering (Refined Lee)
+5. Terrain Correction (Range-Doppler)
+6. Convert linear to dB
+7. Export ML-ready GeoTIFF
+8. Build SNAP graph (reuse settings automatically)
+
+
+(How to do)
+Actuall SNAP steps: 
+1. Radar → Apply Orbit File
+2. Radar → Radiometric → S-1 Thermal Noise Removal
+3. Radar → Radiometric → Calibrate
+4. Radar → Speckle Filtering → Single Product Speckle Filter
+5. Radar → Geometric → Ellipsoid Correction → Average Height Range-Doppler
+6. Raster → Data Conversion → Convert bands to/from dB
+7. File → Export → GeoTIFF / BigTIFF
+8. Tools → Graph Builder → Add nodes in order
+
 𝐀𝐩𝐩𝐥𝐲 𝐎𝐫𝐛𝐢𝐭 𝐅𝐢𝐥𝐞
 
 𝐑𝐞𝐦𝐨𝐯𝐞 𝐓𝐡𝐞𝐫𝐦𝐚𝐥 𝐍𝐨𝐢𝐬𝐞
