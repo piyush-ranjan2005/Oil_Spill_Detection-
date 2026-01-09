@@ -49,16 +49,14 @@ https://search.asf.alaska.edu/#/
 𝐀𝐮𝐠 𝟎𝟓, 𝟐𝟎𝟏𝟕 – stress test (coastal-heavy scenes)
 
 
-▢ 𝐖𝐡𝐚𝐭 𝐭𝐨 𝐃𝐨 — 𝐒𝐍𝐀𝐏 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 𝐏𝐢𝐩𝐞𝐥𝐢𝐧𝐞
+▢ 𝐒𝐍𝐀𝐏 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 𝐏𝐢𝐩𝐞𝐥𝐢𝐧𝐞
 
 Raw Sentinel-1 SAR products are not directly suitable for deep learning. Therefore, all SAR scenes were pre-processed using ESA SNAP (Sentinel Application Platform) to generate radiometrically and geometrically corrected, machine-learning-ready images. 
 
 Download SNAP: https://step.esa.int/main/download/ 
 
-The following standard SAR preprocessing pipeline was applied to all Sentinel-1 scenes:
-
 (What to do)
-SNAP Pipeline:
+▢ SNAP Pipeline:
 1. Apply Orbit File
 2. Remove Thermal Noise
 3. Radiometric Calibration (σ⁰)
@@ -70,7 +68,7 @@ SNAP Pipeline:
 
 
 (How to do)
-Actuall SNAP steps: 
+▢ Actuall SNAP steps: 
 1. Radar → Apply Orbit File
 2. Radar → Radiometric → S-1 Thermal Noise Removal
 3. Radar → Radiometric → Calibrate
@@ -79,43 +77,6 @@ Actuall SNAP steps:
 6. Raster → Data Conversion → Convert bands to/from dB
 7. File → Export → GeoTIFF / BigTIFF
 8. Tools → Graph Builder → Add nodes in order
-
-𝐀𝐩𝐩𝐥𝐲 𝐎𝐫𝐛𝐢𝐭 𝐅𝐢𝐥𝐞
-
-𝐑𝐞𝐦𝐨𝐯𝐞 𝐓𝐡𝐞𝐫𝐦𝐚𝐥 𝐍𝐨𝐢𝐬𝐞
-
-𝐑𝐚𝐝𝐢𝐨𝐦𝐞𝐭𝐫𝐢𝐜 𝐂𝐚𝐥𝐢𝐛𝐫𝐚𝐭𝐢𝐨𝐧 (σ⁰)
-
-𝐒𝐩𝐞𝐜𝐤𝐥𝐞 𝐅𝐢𝐥𝐭𝐞𝐫𝐢𝐧𝐠 (𝐑𝐞𝐟𝐢𝐧𝐞𝐝 𝐋𝐞𝐞)
-
-𝐓𝐞𝐫𝐫𝐚𝐢𝐧 𝐂𝐨𝐫𝐫𝐞𝐜𝐭𝐢𝐨𝐧 (𝐑𝐚𝐧𝐠𝐞-𝐃𝐨𝐩𝐩𝐥𝐞𝐫)
-
-𝐂𝐨𝐧𝐯𝐞𝐫𝐭 𝐋𝐢𝐧𝐞𝐚𝐫 𝐒𝐜𝐚𝐥𝐞 𝐭𝐨 𝐝𝐁
-
-𝐄𝐱𝐩𝐨𝐫𝐭 𝐌𝐋-𝐑𝐞𝐚𝐝𝐲 𝐆𝐞𝐨𝐓𝐈𝐅𝐅
-
-𝐁𝐮𝐢𝐥𝐝 𝐒𝐍𝐀𝐏 𝐆𝐫𝐚𝐩𝐡 (𝐟𝐨𝐫 𝐫𝐞𝐮𝐬𝐚𝐛𝐥𝐞 𝐚𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧)
-
-
-▢ 𝐇𝐨𝐰 𝐭𝐨 𝐃𝐨 — 𝐀𝐜𝐭𝐮𝐚𝐥 𝐒𝐍𝐀𝐏 𝐌𝐞𝐧𝐮 𝐒𝐭𝐞𝐩𝐬
-
-The above pipeline was implemented in SNAP using the following menu sequence:
-
-𝐑𝐚𝐝𝐚𝐫 → 𝐀𝐩𝐩𝐥𝐲 𝐎𝐫𝐛𝐢𝐭 𝐅𝐢𝐥𝐞
-
-𝐑𝐚𝐝𝐚𝐫 → 𝐑𝐚𝐝𝐢𝐨𝐦𝐞𝐭𝐫𝐢𝐜 → 𝐒-𝟏 𝐓𝐡𝐞𝐫𝐦𝐚𝐥 𝐍𝐨𝐢𝐬𝐞 𝐑𝐞𝐦𝐨𝐯𝐚𝐥
-
-𝐑𝐚𝐝𝐚𝐫 → 𝐑𝐚𝐝𝐢𝐨𝐦𝐞𝐭𝐫𝐢𝐜 → 𝐂𝐚𝐥𝐢𝐛𝐫𝐚𝐭𝐞
-
-𝐑𝐚𝐝𝐚𝐫 → 𝐒𝐩𝐞𝐜𝐤𝐥𝐞 𝐅𝐢𝐥𝐭𝐞𝐫𝐢𝐧𝐠 → 𝐒𝐢𝐧𝐠𝐥𝐞 𝐏𝐫𝐨𝐝𝐮𝐜𝐭 𝐒𝐩𝐞𝐜𝐤𝐥𝐞 𝐅𝐢𝐥𝐭𝐞𝐫
-
-𝐑𝐚𝐝𝐚𝐫 → 𝐆𝐞𝐨𝐦𝐞𝐭𝐫𝐢𝐜 → 𝐄𝐥𝐥𝐢𝐩𝐬𝐨𝐢𝐝 𝐂𝐨𝐫𝐫𝐞𝐜𝐭𝐢𝐨𝐧 → 𝐀𝐯𝐞𝐫𝐚𝐠𝐞 𝐇𝐞𝐢𝐠𝐡𝐭 𝐑𝐚𝐧𝐠𝐞-𝐃𝐨𝐩𝐩𝐥𝐞𝐫
-
-𝐑𝐚𝐬𝐭𝐞𝐫 → 𝐃𝐚𝐭𝐚 𝐂𝐨𝐧𝐯𝐞𝐫𝐬𝐢𝐨𝐧 → 𝐂𝐨𝐧𝐯𝐞𝐫𝐭 𝐛𝐚𝐧𝐝𝐬 𝐭𝐨/𝐟𝐫𝐨𝐦 𝐝𝐁
-
-𝐅𝐢𝐥𝐞 → 𝐄𝐱𝐩𝐨𝐫𝐭 → 𝐆𝐞𝐨𝐓𝐈𝐅𝐅 / 𝐁𝐢𝐠𝐓𝐈𝐅𝐅
-
-𝐓𝐨𝐨𝐥𝐬 → 𝐆𝐫𝐚𝐩𝐡 𝐁𝐮𝐢𝐥𝐝𝐞𝐫 → 𝐀𝐝𝐝 𝐧𝐨𝐝𝐞𝐬 𝐢𝐧 𝐭𝐡𝐞 𝐚𝐛𝐨𝐯𝐞 𝐨𝐫𝐝𝐞𝐫
 
 
 𝐓𝐢𝐥𝐢𝐧𝐠 𝐒𝐭𝐫𝐚𝐭𝐞𝐠𝐲
