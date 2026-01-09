@@ -1,7 +1,9 @@
 AI-Based Oil Spill Detection Using Sentinel-1 SAR Imagery
 
 Project Title: AI-Driven Oil Spill Detection and Monitoring
+
 Author: Kundan Yadav
+
 Domain: Remote Sensing · Deep Learning · Environmental Monitoring
 
 Project Overview
@@ -10,7 +12,7 @@ Oil spills pose a serious threat to marine ecosystems and coastal environments. 
 
 Unlike classification-based approaches, this project focuses on semantic segmentation, producing pixel-level oil masks that can be further used for spatial analysis and impact assessment.
 
-🎯 Objectives
+Objectives
 
 Detect oil spill regions in Sentinel-1 SAR imagery
 
@@ -28,10 +30,12 @@ Design a system suitable for early-warning and analyst-in-the-loop monitoring
 2. Sensor: Sentinel-1 (C-band SAR)
 
 Dates used:
+
 Step 1: Download ZIP
+
 Download sense from Alaska SAR Facility (ASF) website
+
 https://search.asf.alaska.edu/#/ 
-Step 2: Preprocessing (SNAP → ML-ready tiles)
 
 Aug 09, 2017 – training / validation / primary test
 
@@ -39,9 +43,8 @@ Aug 12, 2017 – training / validation / primary test
 
 Aug 05, 2017 – stress test (coastal-heavy scenes)
 
-Tile size: 400 × 400
 
-Resolution: 10 m × 10 m per pixel
+Step 2: Preprocessing (SNAP → ML-ready tiles)
 
 (What to do)
 SNAP Pipeline:
@@ -65,6 +68,12 @@ Actuall SNAP steps:
 6. Raster → Data Conversion → Convert bands to/from dB
 7. File → Export → GeoTIFF / BigTIFF
 8. Tools → Graph Builder → Add nodes in order
+
+Step 3: tilling
+
+Tile size: 400 × 400
+
+Resolution: 10 m × 10 m per pixel
 
 2. Kaggle Dataset
 
@@ -121,48 +130,67 @@ oil_spill_project/
 ├── README.md
 └── LICENSE
 
-🧪 Evaluation Strategy
+Evaluation Strategy
 Pixel-wise Metrics
 
 Dice and IoU were initially evaluated
+
 Found to be numerically unstable due to extremely sparse oil annotations
+
 Area-Based Evaluation (Primary)
+
 Oil area estimated using predicted masks
 
 Pixel-to-area conversion:
 
 1 pixel = 100 m²
+
 Metrics reported:
+
 Predicted oil area (km²)
+
 Absolute area error
+
 Overestimation ratio
 
 Stress Test
 
 Conducted on 2,712 coastal SAR tiles
+
 Focused on:
+
 Robustness near coastlines
+
 False positives in calm-water regions
+
 Graceful degradation under difficult conditions
 
 📊 Key Results
+
 Primary Test (Open Ocean)
 
 Mean GT oil area: ~0.004 km²
+
 Mean predicted oil area: ~0.37 km²
+
 Model prioritizes high recall and regional localization
 
 Stress Test (Coastal Scenes)
 
 Total tiles: 2,712
+
 Mean predicted oil area: 0.465 km²
+
 Median predicted oil area: 0.266 km²
+
 Max predicted oil area: 2.71 km²
+
 Model remained stable and interpretable under stress
 
 🔍 Key Observations
 
 Pixel-perfect boundary metrics (Dice/IoU) are unsuitable for ultra-thin SAR oil slick annotations
+
 The model functions effectively as an early-warning oil spill localization system
 
 Overestimation is intentional and acceptable for safety-critical environmental monitoring
