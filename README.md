@@ -9,9 +9,7 @@
 
 ▢ 𝐏𝐫𝐨𝐣𝐞𝐜𝐭 𝐎𝐯𝐞𝐫𝐯𝐢𝐞𝐰
 
-Oil spills pose a severe threat to marine ecosystems and coastal environments. Manual inspection of satellite imagery is slow, subjective, and unreliable under adverse weather conditions. This project presents an 𝐀𝐈-𝐛𝐚𝐬𝐞𝐝 𝐨𝐢𝐥 𝐬𝐩𝐢𝐥𝐥 𝐝𝐞𝐭𝐞𝐜𝐭𝐢𝐨𝐧 𝐬𝐲𝐬𝐭𝐞𝐦 using Sentinel-1 Synthetic Aperture Radar (SAR) imagery, designed to automatically localize oil-contaminated regions and support 𝐚𝐫𝐞𝐚 𝐞𝐬𝐭𝐢𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝐞𝐚𝐫𝐥𝐲-𝐰𝐚𝐫𝐧𝐢𝐧𝐠 𝐦𝐨𝐧𝐢𝐭𝐨𝐫𝐢𝐧𝐠.
-
-Unlike classification-based approaches, this project focuses on 𝐬𝐞𝐦𝐚𝐧𝐭𝐢𝐜 𝐬𝐞𝐠𝐦𝐞𝐧𝐭𝐚𝐭𝐢𝐨𝐧, producing pixel-level oil spill masks suitable for spatial analysis and environmental impact assessment.
+Oil spills pose a severe threat to marine ecosystems and coastal environments. Manual inspection of satellite imagery is slow, subjective, and unreliable under adverse weather conditions. This project presents an 𝐀𝐈-𝐛𝐚𝐬𝐞𝐝 𝐨𝐢𝐥 𝐬𝐩𝐢𝐥𝐥 𝐝𝐞𝐭𝐞𝐜𝐭𝐢𝐨𝐧 𝐬𝐲𝐬𝐭𝐞𝐦 using Sentinel-1 Synthetic Aperture Radar (SAR) imagery, designed to automatically localize oil-contaminated regions and support 𝐚𝐫𝐞𝐚 𝐞𝐬𝐭𝐢𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝐞𝐚𝐫𝐥𝐲-𝐰𝐚𝐫𝐧𝐢𝐧𝐠 𝐦𝐨𝐧𝐢𝐭𝐨𝐫𝐢𝐧𝐠. Unlike classification-based approaches, this project focuses on 𝐬𝐞𝐦𝐚𝐧𝐭𝐢𝐜 𝐬𝐞𝐠𝐦𝐞𝐧𝐭𝐚𝐭𝐢𝐨𝐧, producing pixel-level oil spill masks suitable for spatial analysis and environmental impact assessment.
 
 
 ▢ 𝐎𝐛𝐣𝐞𝐜𝐭𝐢𝐯𝐞𝐬
@@ -69,6 +67,29 @@ Download SNAP: https://step.esa.int/main/download/
 - 𝐓𝐢𝐥𝐞 𝐬𝐢𝐳𝐞: 𝟒𝟎𝟎 × 𝟒𝟎𝟎
 - 𝐑𝐞𝐬𝐨𝐥𝐮𝐭𝐢𝐨𝐧: 𝟏𝟎 𝐦 × 𝟏𝟎 𝐦 𝐩𝐞𝐫 𝐩𝐢𝐱𝐞𝐥
 - Non-overlapping tiles were used across all data splits.
+
+▢ Folder Structure
+
+oil_spill_project/
+├── data/
+│   └── sentinel/
+│       └── tiles/
+│           ├── train/
+│           │   ├── images/
+│           │   ├── masks/
+│           │   └── annotations/
+│           ├── val/
+│           │   ├── images/
+│           │   ├── masks/
+│           │   └── annotations/
+│           ├── primary_test/
+│           │   ├── images/
+│           │   ├── masks/
+│           │   └── annotations/
+│           └── stress_test/
+│               └── images/
+├── models/
+    └── best_model.pth
 
 
 ▢ 𝐌𝐨𝐝𝐞𝐥 𝐀𝐫𝐜𝐡𝐢𝐭𝐞𝐜𝐭𝐮𝐫𝐞
