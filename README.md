@@ -1,10 +1,10 @@
-🌊 AI-Based Oil Spill Detection Using Sentinel-1 SAR Imagery
+AI-Based Oil Spill Detection Using Sentinel-1 SAR Imagery
 
 Project Title: AI-Driven Oil Spill Detection and Monitoring
 Author: Kundan Yadav
 Domain: Remote Sensing · Deep Learning · Environmental Monitoring
 
-📌 Project Overview
+Project Overview
 
 Oil spills pose a serious threat to marine ecosystems and coastal environments. Manual inspection of satellite imagery is slow and inefficient, especially under adverse weather conditions. This project presents an AI-based oil spill detection system using Sentinel-1 Synthetic Aperture Radar (SAR) imagery, designed to automatically localize oil-contaminated regions and support area estimation and early warning for environmental monitoring.
 
@@ -13,23 +13,58 @@ Unlike classification-based approaches, this project focuses on semantic segment
 🎯 Objectives
 
 Detect oil spill regions in Sentinel-1 SAR imagery
+
 Generate pixel-wise segmentation masks
+
 Support oil spill area estimation (km²)
+
 Evaluate robustness using coastal stress testing
+
 Design a system suitable for early-warning and analyst-in-the-loop monitoring
 
 🧩 Dataset Description
 1. Sentinel-1 SAR Dataset (Primary)
-Sensor: Sentinel-1 (C-band SAR)
+
+2. Sensor: Sentinel-1 (C-band SAR)
 
 Dates used:
+Step 1: Download ZIP
+Download sense from Alaska SAR Facility (ASF) website
+https://search.asf.alaska.edu/#/ 
+Step 2: Preprocessing (SNAP → ML-ready tiles)
 
 Aug 09, 2017 – training / validation / primary test
+
 Aug 12, 2017 – training / validation / primary test
+
 Aug 05, 2017 – stress test (coastal-heavy scenes)
 
 Tile size: 400 × 400
+
 Resolution: 10 m × 10 m per pixel
+
+(What to do)
+SNAP Pipeline:
+1. Apply Orbit File
+2. Remove Thermal Noise
+3. Radiometric Calibration (σ⁰)
+4. Speckle Filtering (Refined Lee)
+5. Terrain Correction (Range-Doppler)
+6. Convert linear to dB
+7. Export ML-ready GeoTIFF
+8. Build SNAP graph (reuse settings automatically)
+
+
+(How to do)
+Actuall SNAP steps: 
+1. Radar → Apply Orbit File
+2. Radar → Radiometric → S-1 Thermal Noise Removal
+3. Radar → Radiometric → Calibrate
+4. Radar → Speckle Filtering → Single Product Speckle Filter
+5. Radar → Geometric → Ellipsoid Correction → Average Height Range-Doppler
+6. Raster → Data Conversion → Convert bands to/from dB
+7. File → Export → GeoTIFF / BigTIFF
+8. Tools → Graph Builder → Add nodes in order
 
 2. Kaggle Dataset
 
