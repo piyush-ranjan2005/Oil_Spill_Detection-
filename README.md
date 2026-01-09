@@ -122,21 +122,29 @@ Non-overlapping tiles were used across all data splits.
 ▢ 𝐊𝐞𝐲 𝐑𝐞𝐬𝐮𝐥𝐭𝐬
 
 𝐏𝐫𝐢𝐦𝐚𝐫𝐲 𝐓𝐞𝐬𝐭 (𝐎𝐩𝐞𝐧 𝐎𝐜𝐞𝐚𝐧)
+
 𝐌𝐞𝐚𝐧 𝐆𝐓 𝐨𝐢𝐥 𝐚𝐫𝐞𝐚: ~𝟎.𝟎𝟎𝟒 𝐤𝐦²
+
 𝐌𝐞𝐚𝐧 𝐩𝐫𝐞𝐝𝐢𝐜𝐭𝐞𝐝 𝐨𝐢𝐥 𝐚𝐫𝐞𝐚: ~𝟎.𝟑𝟕 𝐤𝐦²
+
 The model prioritizes 𝐡𝐢𝐠𝐡 𝐫𝐞𝐜𝐚𝐥𝐥 𝐚𝐧𝐝 𝐫𝐞𝐠𝐢𝐨𝐧𝐚𝐥 𝐥𝐨𝐜𝐚𝐥𝐢𝐳𝐚𝐭𝐢𝐨𝐧.
 
 
 𝐒𝐭𝐫𝐞𝐬𝐬 𝐓𝐞𝐬𝐭 (𝐂𝐨𝐚𝐬𝐭𝐚𝐥 𝐒𝐜𝐞𝐧𝐞𝐬)
 
 𝐓𝐨𝐭𝐚𝐥 𝐭𝐢𝐥𝐞𝐬: 𝟐,𝟕𝟏𝟐
+
 𝐌𝐞𝐚𝐧 𝐩𝐫𝐞𝐝𝐢𝐜𝐭𝐞𝐝 𝐨𝐢𝐥 𝐚𝐫𝐞𝐚: 𝟎.𝟒𝟔𝟓 𝐤𝐦²
+
 𝐌𝐞𝐝𝐢𝐚𝐧 𝐩𝐫𝐞𝐝𝐢𝐜𝐭𝐞𝐝 𝐨𝐢𝐥 𝐚𝐫𝐞𝐚: 𝟎.𝟐𝟔𝟔 𝐤𝐦²
+
 𝐌𝐚𝐱 𝐩𝐫𝐞𝐝𝐢𝐜𝐭𝐞𝐝 𝐨𝐢𝐥 𝐚𝐫𝐞𝐚: 𝟐.𝟕𝟏 𝐤𝐦²
+
 The model remained 𝐬𝐭𝐚𝐛𝐥𝐞, 𝐢𝐧𝐭𝐞𝐫𝐩𝐫𝐞𝐭𝐚𝐛𝐥𝐞, 𝐚𝐧𝐝 𝐫𝐨𝐛𝐮𝐬𝐭 under stress conditions.
 
 
 ▢ 𝐂𝐨𝐧𝐜𝐥𝐮𝐬𝐢𝐨𝐧
+
 This project demonstrates the feasibility of applying deep learning-based semantic segmentation to oil spill detection using Sentinel-1 SAR imagery. Although precise boundary delineation remains challenging due to annotation sparsity and SAR look-alike phenomena, the proposed system reliably identifies oil-prone regions and provides meaningful area estimates. The results highlight the importance of aligning evaluation metrics with 𝐨𝐩𝐞𝐫𝐚𝐭𝐢𝐨𝐧𝐚𝐥 𝐨𝐛𝐣𝐞𝐜𝐭𝐢𝐯𝐞𝐬 in real-world environmental monitoring.
 
 
