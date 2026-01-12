@@ -44,7 +44,7 @@ Oil_Spill_Detection/
 │   ├── Dataset inspection & statistics
 │   └── Data insights for preprocessing
 │
-├── unet_industry_gpu_4h.keras
+├── unet_final_industry.keras
 │   └── Trained U-Net segmentation model (GPU-trained)
 │
 ├── dataset.zip
