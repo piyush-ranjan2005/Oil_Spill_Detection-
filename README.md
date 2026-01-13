@@ -131,15 +131,26 @@ Rather than performing image-level classification, the model generates pixel-lev
 🧰 Tech Stack
 <p align="left"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" width="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" width="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" width="40"/> <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="42"/>
     
-🚀 How to Run
+🚀 Deployable Link
 
-<b>Option 1: Google Colab (Recommended)</b>
+<h2>🚀 Live Demo & Deployment</h2>
 
-<ul> <li>Upload notebooks to Colab</li> <li>Upload or mount dataset</li> <li>Run cells sequentially</li> <li>Train or load the pre-trained model</li> </ul>
+<p align="center">
+  <strong>Experience the AI-powered oil spill detection system in action.</strong><br/>
+  Upload satellite imagery and view real-time segmentation results powered by deep learning.
+</p>
 
-<b>Option 2: Local</b>
+Deployable Link: https://huggingface.co/spaces/ritwik01/oil_spill_analysis
 
-pip install tensorflow opencv-python numpy matplotlib
+<p align="center">
+<a href="https://huggingface.co/spaces/ritwik01/oil_spill_analysis" target="_blank">
+    <img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Live%20Demo-yellow?style=for-the-badge"/>
+  </a>
+  <a href="https://github.com/YOUR_GITHUB_REPO" target="_blank">
+    <img src="https://img.shields.io/badge/Star-GitHub-black?style=for-the-badge"/>
+  </a>
+</p>
+
 
 🔮 Future Improvements
 <ul> <li>Deploy as a real-time monitoring API</li> <li>Integrate temporal satellite data for spill tracking</li> <li>Improve generalization with multi-sensor data</li> <li>Optimize for edge and low-resource environments</li> </ul>
