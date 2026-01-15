@@ -4,7 +4,7 @@
 - 𝐏𝐫𝐨𝐣𝐞𝐜𝐭 𝐓𝐢𝐭𝐥𝐞: 𝐀𝐈-𝐃𝐫𝐢𝐯𝐞𝐧 𝐎𝐢𝐥 𝐒𝐩𝐢𝐥𝐥 𝐃𝐞𝐭𝐞𝐜𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝐌𝐨𝐧𝐢𝐭𝐨𝐫𝐢𝐧𝐠
 - 𝐀𝐮𝐭𝐡𝐨𝐫: 𝐊𝐮𝐧𝐝𝐚𝐧 𝐘𝐚𝐝𝐚𝐯
 - 𝐃𝐨𝐦𝐚𝐢𝐧: 𝐑𝐞𝐦𝐨𝐭𝐞 𝐒𝐞𝐧𝐬𝐢𝐧𝐠 · 𝐃𝐞𝐞𝐩 𝐋𝐞𝐚𝐫𝐧𝐢𝐧𝐠 · 𝐄𝐧𝐯𝐢𝐫𝐨𝐧𝐦𝐞𝐧𝐭𝐚𝐥 𝐌𝐨𝐧𝐢𝐭𝐨𝐫𝐢𝐧𝐠
-- Deployment link: 
+- Deployment link: https://oil-spill-api.vercel.app/ 
 
 
 ▢ 𝐏𝐫𝐨𝐣𝐞𝐜𝐭 𝐎𝐯𝐞𝐫𝐯𝐢𝐞𝐰
@@ -33,6 +33,11 @@ Oil spills pose a severe threat to marine ecosystems and coastal environments. M
 - 𝐀𝐮𝐠 𝟎𝟗, 𝟐𝟎𝟏𝟕 – training / validation / primary test
 - 𝐀𝐮𝐠 𝟏𝟐, 𝟐𝟎𝟏𝟕 – training / validation / primary test
 - 𝐀𝐮𝐠 𝟎𝟓, 𝟐𝟎𝟏𝟕 – stress test (coastal-heavy scenes)
+
+sentinel sense/ product id:
+- S1A_IW_GRDH_1SDV_20170805T023921_20170805T023945_017782_01DCBB_DE28
+- S1A_IW_GRDH_1SDV_20170809T144148_20170809T144213_017848_01DEC1_EC32
+- S1A_IW_GRDH_1SDV_20170812T023120_20170812T023145_017884_01DFD8_6CAE
 
 
 ▢ 𝐒𝐍𝐀𝐏 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 𝐏𝐢𝐩𝐞𝐥𝐢𝐧𝐞
