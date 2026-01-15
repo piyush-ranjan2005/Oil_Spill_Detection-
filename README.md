@@ -34,7 +34,7 @@ Oil spills pose a severe threat to marine ecosystems and coastal environments. M
 - 𝐀𝐮𝐠 𝟏𝟐, 𝟐𝟎𝟏𝟕 – training / validation / primary test
 - 𝐀𝐮𝐠 𝟎𝟓, 𝟐𝟎𝟏𝟕 – stress test (coastal-heavy scenes)
 
-sentinel sense/ product id:
+sentinel scene/ product id:
 - S1A_IW_GRDH_1SDV_20170805T023921_20170805T023945_017782_01DCBB_DE28
 - S1A_IW_GRDH_1SDV_20170809T144148_20170809T144213_017848_01DEC1_EC32
 - S1A_IW_GRDH_1SDV_20170812T023120_20170812T023145_017884_01DFD8_6CAE
