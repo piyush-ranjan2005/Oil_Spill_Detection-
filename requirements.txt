@@ -1,8 +1,9 @@
 streamlit
 torch
 torchvision
-opencv-python
 numpy
-segmentation-models-pytorch
+Pillow
+opencv-python-headless
 albumentations
+segmentation-models-pytorch
 gdown
