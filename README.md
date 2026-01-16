@@ -2,18 +2,18 @@
 Oil Spill Detection Using SAR Images and Deep Learning
 
 Submitted by Sanskar Sutar
-________________________________________
+
 1. Introduction
 Oil spills in oceans are a serious environmental problem and need to be detected as early as possible. One of the most reliable ways to detect oil spills is by using Synthetic Aperture Radar (SAR) images because they can capture images in all weather conditions and both day and night.
 In this project, a deep learning based system is developed to classify SAR images into Oil Spill and No Oil Spill categories. The complete work includes image preprocessing, model training, testing, and deployment of the model so that it can be accessed publicly.
-________________________________________
+
 2. Objectives
 The main objectives of this project are:
 •	To preprocess SAR images and reduce noise
 •	To train a deep learning model for oil spill detection
 •	To test the model using unseen data
 •	To deploy the trained model and generate a public link
-________________________________________
+
 3. Dataset Description
 The dataset used in this project contains SAR images divided into two classes:
 •	OilSpill
@@ -27,7 +27,7 @@ Sanskar_Dataset/
  └── NoSpill/
      ├── Train/
      └── Test/
-________________________________________
+
 4. Image Preprocessing
 SAR images usually contain speckle noise, which can affect the performance of the model. To improve image quality, preprocessing was performed before training.
 The following steps were applied:
@@ -44,7 +44,7 @@ Sanskar_dataset_preprocessed/
  └── NoSpill/
      ├── Train/
      └── Test/
-________________________________________
+
 5. Model Training
 The deep learning model was trained using the preprocessed training images. During training, the model learned the visual differences between oil spill and non-oil spill regions.
 The training process included:
@@ -52,10 +52,11 @@ The training process included:
 •	Compiling the model
 •	Training the model on training data
 •	Saving the trained model
-________________________________________
+
 6. Model Testing and Evaluation
 After training, the model was tested using the test dataset. This helped in checking how well the model performs on new and unseen images. The accuracy obtained shows that the model is able to correctly classify oil spill and non-oil spill images.
-________________________________________
+
+
 7. Deployment
 The trained model was deployed as a web application so that it can be used by anyone.
 The deployed system allows:
@@ -64,7 +65,7 @@ The deployed system allows:
 
 Deployment Link:
 Oil Spill Detection · Streamlit
-________________________________________
+
 8. Tools and Technologies Used
 •	Python
 •	OpenCV
@@ -73,10 +74,10 @@ ________________________________________
 •	TensorFlow / Keras
 •	Google Colab
 •	GitHub
-________________________________________
+
 9. Conclusion
 In this project, a deep learning based oil spill detection system was successfully developed using SAR images. Image preprocessing played an important role in improving model performance. The deployed model provides a simple and effective way to identify oil spills from SAR images.
-________________________________________
+
 10. Future Improvements
 •	Use a larger dataset for better accuracy
 •	Apply advanced CNN models
