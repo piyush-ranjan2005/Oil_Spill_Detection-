@@ -113,9 +113,9 @@ Black (0) → Water
 
            ---5️⃣ Project Workflow---
 
+<img width="416" height="727" alt="Screenshot 2026-01-13 173909" src="https://github.com/user-attachments/assets/f3f0621d-a033-4c58-a3b3-3c374be119ac" />
 
 
-<img width="416" height="727" alt="image" src="https://github.com/user-attachments/assets/1069f199-994f-49c0-a8d5-60240233b6a4" />
 
 
 
@@ -142,7 +142,8 @@ Oil regions appear brighter
 Class imbalance exists (water dominates)
 
 
-<img width="930" height="674" alt="image" src="https://github.com/user-attachments/assets/b065cc83-bd92-4844-9ab1-d240d469e918" />
+
+<img width="930" height="674" alt="Screenshot 2026-01-10 143712" src="https://github.com/user-attachments/assets/b679b37b-3aa8-4fa7-9c10-28db9957a837" />
 
 
 
@@ -218,7 +219,8 @@ Batch Size: 8
 Training was checkpointed to allow resume after interruption.
 
 
-<img width="587" height="352" alt="image" src="https://github.com/user-attachments/assets/2c32dfc4-20a7-4d68-a44e-8918279f6339" />
+<img width="587" height="352" alt="Screenshot 2026-01-13 170427" src="https://github.com/user-attachments/assets/25fa658e-041d-4e45-b383-82ef995014cf" />
+
 
                    
                          ---🔁 Training Concepts Explained---
@@ -243,13 +245,15 @@ Dice Coefficient
 Intersection over Union (IoU)
 Precision & Recall
 Pixel-level Confusion Matrix
-
-<img width="1450" height="805" alt="image" src="https://github.com/user-attachments/assets/f32b3d49-89a0-47ab-a549-0eea6777d312" />
-
+<img width="1450" height="805" alt="Screenshot 2026-01-13 171134" src="https://github.com/user-attachments/assets/cbeff4ba-86da-4425-ad58-de30c867de64" />
 
 
+<img width="819" height="691" alt="Screenshot 2026-01-13 171407" src="https://github.com/user-attachments/assets/d6dd278e-6bb9-45c5-8ea4-114c2b8a410e" />
 
-<img width="819" height="691" alt="image" src="https://github.com/user-attachments/assets/5056dd3b-b4dd-464f-bc0f-fe756c4070d1" />
+
+
+
+
 
 
 
@@ -273,8 +277,9 @@ Data augmentation
 Longer training
 
 
+<img width="1186" height="868" alt="Screenshot 2026-01-13 171506" src="https://github.com/user-attachments/assets/6521d750-fa8f-4efc-bce5-cdee94547c0b" />
 
-<img width="1186" height="868" alt="image" src="https://github.com/user-attachments/assets/441c9ab2-369d-4997-b7fb-3c8f99118739" />
+
 
 
 
@@ -287,8 +292,9 @@ Morphological opening
 Morphological closing
 
 This removes isolated false detections and smooths boundaries.
+<img width="1264" height="824" alt="Screenshot 2026-01-13 171643" src="https://github.com/user-attachments/assets/1fcde4c5-b532-452d-8809-99d417ed476d" />
 
-<img width="1264" height="824" alt="image" src="https://github.com/user-attachments/assets/53392942-0281-468e-9597-dfc1e2d4fcb2" />
+
 
 
 
@@ -325,8 +331,9 @@ Severity analysis
 
 PDF report download
 
+<img width="1903" height="771" alt="Screenshot 2026-01-13 171900" src="https://github.com/user-attachments/assets/0f174bbb-4d98-4410-adaa-d32e7fa0c549" />
 
-<img width="1903" height="771" alt="image" src="https://github.com/user-attachments/assets/668b166c-8d0c-4705-b1a4-7b2fbaa95de3" />
+
 
 
 
@@ -353,43 +360,47 @@ https://oil-spilldetection-2k25.streamlit.app/
 
 Input SAR image
 
-<img width="256" height="256" alt="palsar_20" src="https://github.com/user-attachments/assets/4db132f0-28b1-4364-900b-093b5eed9a58" />
+<img width="908" height="569" alt="image" src="https://github.com/user-attachments/assets/bb2b6017-6380-4cce-aa10-66aebc05ec73" />
 
 
 
 
 Probability map
 
-<img width="480" height="497" alt="image" src="https://github.com/user-attachments/assets/782a00fa-4b69-429d-aaec-b6753ada82d5" />
 
+<img width="480" height="497" alt="Screenshot 2026-01-13 172622" src="https://github.com/user-attachments/assets/15f8af75-2467-4a4d-9384-ebf11bd965b1" />
 
 
 
 Binary mask
 
-<img width="956" height="595" alt="image" src="https://github.com/user-attachments/assets/2479c8ef-cdbc-4c95-93c3-9ebf32fc2d59" />
+<img width="956" height="595" alt="Screenshot 2026-01-13 172720" src="https://github.com/user-attachments/assets/06b8ca9e-44d6-4198-938c-6119873a8674" />
 
 
 
 Overlay image
 
-<img width="417" height="500" alt="image" src="https://github.com/user-attachments/assets/f3bed413-e758-47c4-af5c-5079a8ba9ab7" />
+<img width="417" height="500" alt="Screenshot 2026-01-13 172812" src="https://github.com/user-attachments/assets/a9be5572-f4f1-4507-81bf-31ee4d36b5c6" />
 
 
 
 
 Severity output
 
-<img width="542" height="482" alt="image" src="https://github.com/user-attachments/assets/3ff9e62f-922a-48eb-9a89-dd100cb0586c" />
+<img width="542" height="482" alt="Screenshot 2026-01-13 172841" src="https://github.com/user-attachments/assets/e8c5419e-23c6-4405-942d-f3eb10cf3c12" />
 
 
 
 Overall UI and output of the model with the downloaded report
 
-<img width="1864" height="794" alt="image" src="https://github.com/user-attachments/assets/02ac85d1-6b4d-4a0d-aa2c-b8f01ad5c503" />
-<img width="1798" height="773" alt="image" src="https://github.com/user-attachments/assets/ff57efe4-70ef-4e06-8e2c-eea0aa1b9180" />
-<img width="562" height="830" alt="image" src="https://github.com/user-attachments/assets/8c330de3-bc82-49f1-8315-8e5770314eb5" />
-<img width="621" height="801" alt="image" src="https://github.com/user-attachments/assets/30b0b34d-a467-4080-b588-4aa7f468aeaa" />
+<img width="1864" height="794" alt="Screenshot 2026-01-13 173139" src="https://github.com/user-attachments/assets/96c86c05-1bfb-4046-a4d4-511e4e8219df" />
+
+<img width="1798" height="773" alt="Screenshot 2026-01-13 173230" src="https://github.com/user-attachments/assets/8a9d6a05-67aa-482b-90fd-8a096584ab84" />
+
+<img width="562" height="830" alt="Screenshot 2026-01-13 173404" src="https://github.com/user-attachments/assets/2ab12396-3fb0-426b-aa11-99c445232406" />
+
+<img width="621" height="801" alt="Screenshot 2026-01-13 173454" src="https://github.com/user-attachments/assets/ce5aaf80-9c6a-4406-9f73-7adb744ec658" />
+
 
 
 
@@ -444,3 +455,4 @@ Project Type: Academic / Research / Internship Project
 Mentor guidance
 
 Open SAR datasets
+
