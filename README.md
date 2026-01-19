@@ -1,137 +1,159 @@
-📂 Project Structure
+# 🛢️ Oil Spill Detection Using SAR Images (UNet)
+
+Deep Learning–based Semantic Segmentation of Oil Spills from Synthetic Aperture Radar (SAR) Images using UNet.
+
+---
+
+## 📌 Project Overview
+
+Oil spills cause severe environmental damage and require fast, reliable monitoring.  
+This project implements a **UNet-based deep learning model** to detect and segment oil spills from **SAR images**, which are widely used because they:
+
+- Work day and night  
+- Are weather independent  
+- Highlight oil spills due to backscatter differences  
+
+The project covers the **complete pipeline**:
+- Exploratory Data Analysis (EDA)
+- SAR-specific preprocessing
+- Data augmentation
+- UNet model training
+- Model saving and loading
+- Deployment using Streamlit
+
+---
+
+## 🛰️ Sample Outputs (Replace with Your Images)
+
+### Raw SAR Image
+![Raw SAR Image](images/raw_sar.png)
+
+### Ground Truth Mask
+![Ground Truth Mask](images/ground_truth.png)
+
+### Predicted Oil Spill Mask
+![Predicted Mask](images/predicted_mask.png)
+
+### Overlay Visualization
+![Overlay Result](images/overlay.png)
+
+> 📌 Create an `images/` folder and replace these images with your results.
+
+---
+
+## 🧠 Key Features
+
+- SAR-specific preprocessing (Median Filter + CLAHE)
+- Custom UNet architecture implemented in PyTorch
+- Dice Loss + Cross Entropy Loss
+- Custom Dataset and DataLoader
+- Data augmentation for robustness
+- Streamlit-based inference UI
+- CPU and GPU compatible
+
+---
+
+## 📂 Project Structure
+
 oil-spill-detection/
 │
-├── model.py                 # UNet architecture
-├── app.py                   # Streamlit inference app
-├── sar_unet_model.pth       # Trained model weights
-├── requirements.txt         # Dependencies
-├── images/                  # (Add your result images here)
-│   ├── raw_sar.png
-│   ├── ground_truth.png
-│   ├── predicted_mask.png
-│   └── overlay.png
+├── model.py # UNet architecture
+├── app.py # Streamlit inference app
+├── sar_unet_model.pth # Trained model weights
+├── requirements.txt # Project dependencies
+├── images/ # Output images 
+│ ├── raw_sar.png
+│ ├── ground_truth.png
+│ ├── predicted_mask.png
+│ └── overlay.png
 └── README.md
 
-🔍 Exploratory Data Analysis (EDA)
 
-Visual inspection of SAR images and masks
+---
 
-Shape & datatype verification
+## 🔍 Exploratory Data Analysis (EDA)
 
-SAR noise (speckle) analysis using:
+EDA includes:
+- Visual inspection of SAR images and masks
+- Shape and datatype verification
+- SAR speckle noise analysis using histograms
+- Zoomed texture patches
+- Overlay visualization to verify image–mask alignment
 
-Pixel intensity histograms
+Oil spills appear as **dark, smooth regions** in SAR images due to reduced backscatter.
 
-Zoomed texture patches
+---
 
-Overlay visualization to verify mask alignment
+## ⚙️ Preprocessing Pipeline
 
-Key Insight:
-Oil spills appear as dark, smooth regions in SAR due to reduced backscatter.
+The same preprocessing is applied during **training and inference**.
 
-⚙️ Preprocessing Pipeline (SAR-Specific)
+Steps:
+1. Convert to grayscale (if required)
+2. Resize to `256 × 256`
+3. Normalize intensity values
+4. Median filtering (speckle noise reduction)
+5. CLAHE (contrast enhancement)
+6. Final normalization to `[0, 1]`
 
-Applied consistently during training and inference:
 
-Convert to grayscale (if needed)
+---
 
-Resize to 256 × 256
-
-Normalize pixel values
-
-Median filtering (speckle noise reduction)
-
-CLAHE (contrast enhancement)
-
-Final normalization to [0, 1]
-
-Resize → Denoise → CLAHE → Normalize
-
-🔄 Data Augmentation
+## 🔄 Data Augmentation
 
 To improve generalization:
+- Horizontal flip
+- 90-degree rotation
 
-Horizontal flip
+This helps the model handle orientation variations in SAR data.
 
-90° rotation
+---
 
-This helps the model learn orientation-invariant features.
+## 🧬 Model Architecture (UNet)
 
-🧬 Model Architecture – UNet
+- Encoder–decoder architecture
+- Skip connections preserve spatial information
+- Binary segmentation output
 
-Encoder–decoder structure
+### Output Classes
+- `0` → Background
+- `1` → Oil Spill
 
-Skip connections preserve spatial details
+### Loss Function
 
-Designed for binary segmentation
-
-Output classes:
-
-0 → Background
-
-1 → Oil Spill
-
-Loss Function
-
-Combined loss for stability and accuracy:
-
+Combined loss:
 Total Loss = CrossEntropyLoss + DiceLoss
 
 
 Dice Loss helps handle class imbalance common in oil spill datasets.
 
-🚀 Training Details
+---
 
-Framework: PyTorch
+## 🚀 Training Details
 
-Optimizer: Adam
+- Framework: PyTorch
+- Optimizer: Adam
+- Learning Rate: `1e-4`
+- Batch Size: `8`
+- Train/Validation Split: `80/20`
+- Model saved as: `sar_unet_model.pth`
 
-Learning Rate: 1e-4
+---
 
-Batch Size: 8
+## 🧪 Streamlit Inference App
 
-Train / Validation Split: 80 / 20
+The Streamlit app allows interactive testing.
 
-Model saved as: sar_unet_model.pth
+### Features
+- Upload SAR images (`png`, `jpg`, `jpeg`)
+- Real-time preprocessing
+- Oil spill segmentation
+- Side-by-side visualization:
+  - Original image
+  - Preprocessed image
+  - Predicted mask
 
-🧪 Inference & Deployment (Streamlit)
+### Run the App
 
-The project includes a Streamlit web app for easy testing.
-
-App Features:
-
-Upload SAR image (.png, .jpg)
-
-Preprocessing identical to training
-
-Real-time segmentation
-
-Visual comparison:
-
-Original Image
-
-Preprocessed Image
-
-Predicted Mask
-
-Run the App
+```bash
 streamlit run app.py
-
-📦 Installation
-1️⃣ Clone Repository
-git clone https://github.com/your-username/oil-spill-detection.git
-cd oil-spill-detection
-
-2️⃣ Install Dependencies
-pip install -r requirements.txt
-
-3️⃣ Run Streamlit App
-streamlit run app.py
-
-🧾 Requirements
-torch>=2.0.0
-torchvision>=0.15.0
-streamlit>=1.30.0
-opencv-python-headless>=4.8.0
-numpy>=1.23.0
-Pillow>=9.5.0
