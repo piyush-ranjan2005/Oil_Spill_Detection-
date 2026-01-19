@@ -30,7 +30,7 @@ AI-powered oil spill detection from satellite imagery using deep learning. This 
 1. Clone this repository:
 ```bash
 git clone <your-repo-url>
-cd oil-spill-project
+cd Oil_Spill_UNet_Model_Implementation
 ```
 
 2. Create a virtual environment (recommended):
