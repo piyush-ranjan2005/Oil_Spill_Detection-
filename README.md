@@ -56,17 +56,17 @@ The project covers the **complete pipeline**:
 ## 📂 Project Structure
 
 oil-spill-detection/
-│
-├── model.py # UNet architecture
-├── app.py # Streamlit inference app
-├── sar_unet_model.pth # Trained model weights
-├── requirements.txt # Project dependencies
-├── images/ # Output images 
-│ ├── raw_sar.png
-│ ├── ground_truth.png
-│ ├── predicted_mask.png
-│ └── overlay.png
+├── model.py
+├── app.py
+├── sar_unet_model.pth
+├── requirements.txt
+├── images/
+│   ├── raw_sar.png
+│   ├── ground_truth.png
+│   ├── predicted_mask.png
+│   ├── overlay.png
 └── README.md
+
 
 
 ---
