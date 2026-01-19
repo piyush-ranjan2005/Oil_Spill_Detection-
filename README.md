@@ -31,7 +31,7 @@ The project covers the **complete pipeline**:
 
 ## 🖥️ Application Interface
 
-![Streamlit Interface](images/app_interface.png)
+![Streamlit Interface](ui1.png)
 
 > Upload a SAR image and get real-time oil spill segmentation using a UNet-based deep learning model.
 
@@ -39,7 +39,7 @@ The project covers the **complete pipeline**:
 
 ## 🛢️ Oil Spill Segmentation Result
 
-![Oil Spill Segmentation](images/segmentation_result.png)
+![Oil Spill Segmentation](ui2.png)
 
 > Predicted binary mask highlighting oil spill regions extracted from SAR imagery.
 
@@ -68,7 +68,7 @@ oil-spill-detection/
 ├── app.py
 ├── sar_unet_model.pth
 ├── requirements.txt
-├──oil-spill.ipynb
+├── oil-spill.ipynb
 └── README.md
 ```
 
