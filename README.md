@@ -67,7 +67,7 @@ oil-spill-detection/
 │   ├── predicted_mask.png
 │   └── overlay.png
 └── README.md
-
+```
 
 ---
 
