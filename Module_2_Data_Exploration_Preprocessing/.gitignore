@@ -1,0 +1,16 @@
+# Ignore datasets
+data/
+Dataset/
+*.zip
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore large images if any
+*.tif
+*.tiff
