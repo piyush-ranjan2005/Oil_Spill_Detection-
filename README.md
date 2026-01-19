@@ -22,22 +22,29 @@ The project covers the **complete pipeline**:
 - Deployment using Streamlit
 
 ---
+# 🛢️ Oil Spill Detection Using SAR Images (UNet)
 
-## 🛰️ Sample Outputs (Replace with Your Images)
+🚀 **Live Deployment (Streamlit App):**  
+👉 https://osd-lurdu-cstjqxsrnhtsg5czmsj9mw.streamlit.app/
 
-### Raw SAR Image
-![Raw SAR Image](images/raw_sar.png)
+---
 
-### Ground Truth Mask
-![Ground Truth Mask](images/ground_truth.png)
+## 🖥️ Application Interface
 
-### Predicted Oil Spill Mask
-![Predicted Mask](images/predicted_mask.png)
+![Streamlit Interface](images/app_interface.png)
 
-### Overlay Visualization
-![Overlay Result](images/overlay.png)
+> Upload a SAR image and get real-time oil spill segmentation using a UNet-based deep learning model.
 
-> 📌 Create an `images/` folder and replace these images with your results.
+---
+
+## 🛢️ Oil Spill Segmentation Result
+
+![Oil Spill Segmentation](images/segmentation_result.png)
+
+> Predicted binary mask highlighting oil spill regions extracted from SAR imagery.
+
+---
+
 
 ---
 
@@ -61,11 +68,7 @@ oil-spill-detection/
 ├── app.py
 ├── sar_unet_model.pth
 ├── requirements.txt
-├── images/
-│   ├── raw_sar.png
-│   ├── ground_truth.png
-│   ├── predicted_mask.png
-│   └── overlay.png
+├──oil-spill.ipynb
 └── README.md
 ```
 
