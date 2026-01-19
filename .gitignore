@@ -1,6 +1,0 @@
-Dataset/
-preprocessed_data/*.npy
-*.tif
-*.png
-*.jpg
-.ipynb_checkpoints/
