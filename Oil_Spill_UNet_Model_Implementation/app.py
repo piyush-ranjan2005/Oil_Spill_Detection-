@@ -10,8 +10,12 @@ from PIL import Image
 import cv2
 import matplotlib.pyplot as plt
 import io
+import os
 
 from model import AttentionUNet
+
+# Get the directory where this script is located
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Page configuration
 st.set_page_config(
@@ -112,14 +116,18 @@ st.markdown("""
 def load_model():
     """Load trained model (cached for efficiency)"""
     try:
+        # Construct absolute path to model file
+        model_path = os.path.join(SCRIPT_DIR, 'best_model.pth')
+
         model = AttentionUNet(in_channels=1, out_channels=1)
         model.load_state_dict(
-            torch.load('best_model.pth', map_location='cpu')
+            torch.load(model_path, map_location='cpu')
         )
         model.eval()
         return model
     except Exception as e:
         st.error(f"⚠️ Error loading model: {e}")
+        st.error(f"Looking for model at: {os.path.join(SCRIPT_DIR, 'best_model.pth')}")
         st.error("Make sure 'best_model.pth' exists in the project directory.")
         st.error("Run 'python train.py' first to train the model.")
         return None
