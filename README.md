@@ -62,6 +62,11 @@ The trained model was deployed as a web application so that it can be used by an
 The deployed system allows:
 •	Uploading a SAR image
 •	Getting instant prediction (Oil Spill or No Oil Spill)
+Images attched:-
+1)<img width="1327" height="949" alt="image" src="https://github.com/user-attachments/assets/4f6ef8ee-c664-4ea1-a525-37fc27a0e512" />
+2)<img width="1272" height="941" alt="image" src="https://github.com/user-attachments/assets/b890fa68-ce64-428a-a44a-95601aa21690" />
+
+
 
 Deployment Link:
 Oil Spill Detection · Streamlit
