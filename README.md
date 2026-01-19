@@ -55,17 +55,18 @@ The project covers the **complete pipeline**:
 
 ## 📂 Project Structure
 
+```text
 oil-spill-detection/
-|- model.py
-|- app.py
-|- sar_unet_model.pth
-|- requirements.txt
-|- images/
-|  |- raw_sar.png
-|  |- ground_truth.png
-|  |- predicted_mask.png
-|  |- overlay.png
-|- README.md
+├── model.py
+├── app.py
+├── sar_unet_model.pth
+├── requirements.txt
+├── images/
+│   ├── raw_sar.png
+│   ├── ground_truth.png
+│   ├── predicted_mask.png
+│   └── overlay.png
+└── README.md
 
 
 ---
