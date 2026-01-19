@@ -503,7 +503,7 @@ CMD ["streamlit", "run", "app.py"]
 ```
 
 ### Deployed Application
-> **Live Demo**: [Deployment URL will be added here]
+> **Live Demo**: https://oil-spill-detection-ai.streamlit.app/
 
 **Note**: The trained model (`best_model.pth`) is tracked using Git LFS due to its 120MB size.
 
