@@ -137,10 +137,10 @@ The trained model is saved for reuse and deployment:
 <pre>model.save("oil_spill_model.keras")</pre>
 
 🌐 Deployment Strategy
-Deployable Link: https://oil-spill-detection-app-dbzewqefbtj6bpvujylg9j.streamlit.app/
+Deployable Link: https://huggingface.co/spaces/kalynipatil252/oil_spill_detection
 
 <p align="center">
-  <a href="https://oil-spill-detection-app-dbzewqefbtj6bpvujylg9j.streamlit.app/" target="_blank">
+  <a href="https://huggingface.co/spaces/kalynipatil252/oil_spill_detection" target="_blank">
     <img
       src="https://img.shields.io/badge/🚀%20Live%20Demo-Click%20Here-success?style=for-the-badge"
       alt="Live Demo Link"
