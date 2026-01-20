@@ -57,9 +57,14 @@ identify oil spill regions from large volumes of satellite data.
 ---
 
 
-### 📈 Results
-- The model is able to detect oil spill regions reasonably well
-- Output images show detected oil spill areas
+## 📊 Results & Visualizations
+The following screenshots show prototype-level output visualizations
+generated during initial testing of the model pipeline.
+
+<p align="center">
+  <img src="model_output.png" width="45%" />
+  <img src="model_output_2.png" width="45%" />
+</p>
 
 ---
 
