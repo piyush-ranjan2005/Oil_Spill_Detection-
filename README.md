@@ -15,7 +15,8 @@ An AI-powered marine oil spill detection application using deep learning segment
 
 
 
-## 🎬 Demo Video(https://github.com/user-attachments/assets/32a68d21-97ec-477c-8c49-a22e391e42f6)
+## 🎬 Demo Video
+https://github.com/user-attachments/assets/32a68d21-97ec-477c-8c49-a22e391e42f6
 
 
 ## 📸 Screenshots
@@ -188,7 +189,7 @@ requests>=2.28.0
 ```
 
 ---
-## Developed By Ayush Nema(https://github.com/Ayushnema704)
+## Developed By [Ayush Nema](https://github.com/Ayushnema704)
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
