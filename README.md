@@ -145,7 +145,87 @@ data/
 > ⚠️ The dataset is **not included in the repository** due to size constraints.
 
 ---
+🌐 Streamlit App Deployment & Usage
 
+This project also includes a Streamlit-based web application for interactive oil spill detection.
+
+The app allows you to upload SAR images and visualize predicted oil spill masks directly in the browser.
+
+---
+
+▶️ Run the App Locally
+
+After cloning the repository and installing requirements, run:
+
+streamlit run app.py
+
+You will see output like:
+
+Local URL: http://localhost:8501
+Network URL: http://172.28.0.12:8501
+External URL: http://35.196.231.118:8501
+
+Open http://localhost:8501 in your browser.
+
+---
+
+🌍 Public Access Using Ngrok (Optional)
+
+If you want to access the app remotely (for demo or sharing):
+
+ngrok http 8501
+
+Example generated public URL:
+
+https://exaggeratingly-claimable-irene.ngrok-free.dev → http://localhost:8501
+
+Open the HTTPS link in any browser to access the app online.
+
+---
+
+⚠️ Common Ngrok Warning & Fix
+
+If you see this warning:
+
+failed to open private leg
+connect: connection refused
+
+It usually means Streamlit is not running.
+
+✔️ Fix:
+
+1. First start Streamlit:
+streamlit run app.py
+2. Then start Ngrok:
+ngrok http 8501
+
+Make sure port 8501 is active before launching Ngrok.
+
+---
+
+📌 Important Note
+
+Before running the Streamlit app, ensure you have:
+
+- ✅ Downloaded the dataset
+- ✅ Placed it in the correct folder structure
+- ✅ Run all improved model code (Enhanced V2)
+- ✅ Saved the trained model file (e.g., "model.pth") in the project directory
+
+The app loads the trained model for real-time prediction.
+
+---
+
+🖥️ Example App Output
+
+The Streamlit app displays:
+
+- Uploaded SAR image
+- Predicted oil spill mask
+- Overlay visualization
+- Segmentation results for analysis
+
+This makes the project suitable for demonstrations, research validation, and portfolio presentation.
 ## 🚀 Training & Evaluation
 
 ### Training Configuration
