@@ -112,12 +112,12 @@ This performance is suitable for academic evaluation and prototype-level deploym
 
 <p align="center">
   <img
-    src="[RESULT_IMAGE_1]"
+    src="oil_spill_detect"
     alt="Oil Spill Detection – Image"
     width="48%"
   />
   <img
-    src="[RESULT_IMAGE_2]"
+    src="no_oil_spill_detect"
     alt="Oil Spill Detection – Image"
     width="48%"
   />
