@@ -88,6 +88,7 @@ Deployment: Single-image inference
 
 ---
 
+
 ## 🚀 Deployment Link
 
 The trained model is deployed as a simple web application where users can upload satellite images and view oil spill detection results.
