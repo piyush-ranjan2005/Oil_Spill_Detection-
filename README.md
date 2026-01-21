@@ -73,6 +73,22 @@ Download SNAP: https://step.esa.int/main/download/
 - 𝐑𝐞𝐬𝐨𝐥𝐮𝐭𝐢𝐨𝐧: 𝟏𝟎 𝐦 × 𝟏𝟎 𝐦 𝐩𝐞𝐫 𝐩𝐢𝐱𝐞𝐥
 - Non-overlapping tiles were used across all data splits.
 
+
+Dataset Annotation
+
+- 450 SAR tiles were manually annotated at pixel level
+- Train - 300
+- Validation - 75
+- Primary test - 75
+- Annotation was performed using LabelMe
+- Manual annotation was necessary because publicly available, pixel-accurate oil spill masks are extremely limited, especially for SAR imagery
+
+Annotation Tool
+- LabelMe (Python-based annotation tool)
+- https://github.com/wkentaro/labelme
+
+
+
 ▢ Folder Structure
 
 oil_spill_project/
