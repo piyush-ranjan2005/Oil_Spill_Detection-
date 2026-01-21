@@ -35,8 +35,7 @@ OilWatch AI leverages **satellite SAR imagery** (Sentinel-1, PALSAR) and **deep 
 
 This system is accessible via **Streamlit or Flask**, enabling environmental agencies to use it **without technical expertise**.  
 
-**Deployment Link:** [OilWatch AI Web App](https://your-deployment-link.com) *(replace with actual link)*  
-
+**Deployment Link:** [OilWatch AI Web App]([https://your-deployment-link.com](https://oilwatch-ai.streamlit.app/) 
 ---
 
 ## **Key Features**
@@ -135,7 +134,7 @@ streamlit run app.py
 ```
 4 .Upload satellite images through the interface to detect oil spills and view segmentation masks.
 
-Deployment Link: 
+Deployment Link: https://oilwatch-ai.streamlit.app/
 
 ---
 ## **Future Enhancements**
