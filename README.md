@@ -1,16 +1,24 @@
 
 AI-Driven SAR Oil Spill Detection & Monitoring System
+
 📌 Project Overview
+
 This project implements a production-ready AI system for identifying and monitoring oil spills from SAR satellite imagery using U-Net deep learning semantic segmentation. 
 The system achieves IoU: 0.76+ and Dice: 0.85+, enabling pixel-precise detection for environmental monitoring.
 trained to detect oil-contaminated regions at the pixel level, enabling accurate localization and efficient large-scale monitoring of marine environments.
 
 ✅ Work Completed So Far
+
  Collected SAR satellite images and synthetic ground-truth masks
+ 
  Designed lightweight U-Net (487K parameters)
+ 
  5-minute GPU training pipeline (Google Colab)
+ 
  Production metrics evaluation (IoU, Dice, Precision, Recall)
+ 
  Interactive 2x6 prediction visualization with per-image IoU
+ 
  Model export (sar_oil_spill_detector.keras)
 
  Self-contained pipeline - runs anywhere
@@ -23,9 +31,12 @@ The dataset used in this project consists of **satellite images of ocean surface
 ### 🔹 Dataset Description
 
 Input Data: SAR satellite imagery (256×256×3 RGB)
+
 Labels: Binary segmentation masks
+
   1 → Oil spill regions (dark signatures)
   0 → Sea background (speckle texture)
+  
 Content: Realistic SAR speckle + synthetic oil spills
 Size: 80 train + 16 validation samples
 
