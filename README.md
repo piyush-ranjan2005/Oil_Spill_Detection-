@@ -1,6 +1,8 @@
 # 🌊 OilWatch AI 🛢️
 
 **AI-Driven Oil Spill Identification and Monitoring System using Satellite Imagery and Deep Learning**
+<img width="1361" height="527" alt="Screenshot 2026-01-21 143036" src="https://github.com/user-attachments/assets/196eb5af-3df6-4279-9930-81cd3c56d413" />
+
 
 ---
 
@@ -135,6 +137,10 @@ streamlit run app.py
 4 .Upload satellite images through the interface to detect oil spills and view segmentation masks.
 
 Deployment Link: https://oilwatch-ai.streamlit.app/
+<img width="1364" height="673" alt="Screenshot 2026-01-21 143013" src="https://github.com/user-attachments/assets/cf1325cb-9b2b-46e7-8dff-a91a48784f99" />
+Oil Spill Detected
+<img width="1365" height="675" alt="Screenshot 2026-01-21 143100" src="https://github.com/user-attachments/assets/27b3836a-a146-43e6-8c6f-7e60152bf346" />
+No Oil Spill Detected
 
 ---
 ## **Future Enhancements**
