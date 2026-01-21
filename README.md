@@ -43,19 +43,23 @@ Size: 80 train + 16 validation samples
 * **Image Content:** Open ocean surfaces with and without oil contamination
 * **Purpose:** Train the model to learn visual and spatial patterns of oil spills
 
-### 🔹 Data Organization
+ 🔹 Data Organization
 
 The dataset is organized into the following structure:
 
-text
+
 AI-OIL-SPILL-DETECTION/
+
 ├── uploaded_files/     # Your uploaded SAR images + masks
+
 ├── sar_oil_spill_detector.keras  # Trained model
+
 ├── complete_pipeline.py          # Self-contained code
+
 └── results/           # Prediction screenshots
 ```
 
-### 🔹 Preprocessing Steps
+ 🔹 Preprocessing Steps
 
 To improve model performance, the following preprocessing steps were applied:
 
@@ -66,7 +70,7 @@ To improve model performance, the following preprocessing steps were applied:
 5. Binary masks: Threshold > 0.5
 6. Train/Val split: 80/20 ratio
 
-### 🔹 Dataset Usage
+🔹 Dataset Usage
 Training: U-Net encoder-decoder optimization
 Validation: IoU/Dice production metrics
 Visualization: 2x6 prediction grids
