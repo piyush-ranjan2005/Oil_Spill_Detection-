@@ -7,6 +7,26 @@ This project implements a production-ready AI system for identifying and monitor
 The system achieves IoU: 0.76+ and Dice: 0.85+, enabling pixel-precise detection for environmental monitoring.
 trained to detect oil-contaminated regions at the pixel level, enabling accurate localization and efficient large-scale monitoring of marine environments.
 
+Objectives
+
+.Automate pixel-level detection of oil spills in SAR imagery to protect marine ecosystems and coastal economies.
+
+.Achieve production-ready metrics like IoU >0.76 and Dice >0.85 using lightweight U-Net models.
+
+.Enable real-time monitoring via Google Colab pipelines for quick training and deployment.
+​
+
+Key Features
+
+*5-minute GPU training: Full pipeline in Google Colab with file uploads for SAR images and masks.
+
+*Lightweight U-Net: 487K parameters, TensorFlow/Keras-based, handles class imbalance with focal loss.
+
+*Evaluation & Visualization: IoU/Dice metrics, prediction grids (e.g., 2x6 SAR samples), Streamlit/Hugging Face deployment.
+
+*Data Handling: Supports real annotated masks, thresholding, overfitting mitigation via synthetic/real data.
+​
+
 ✅ Work Completed So Far
 
  Collected SAR satellite images and synthetic ground-truth masks
@@ -28,7 +48,7 @@ trained to detect oil-contaminated regions at the pixel level, enabling accurate
 
 The dataset used in this project consists of **satellite images of ocean surfaces** along with their corresponding **ground-truth segmentation masks** that indicate oil spill regions.
 
-### 🔹 Dataset Description
+🔹 Dataset Description
 
 Input Data: SAR satellite imagery (256×256×3 RGB)
 
