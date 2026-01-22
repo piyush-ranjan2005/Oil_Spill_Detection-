@@ -131,7 +131,12 @@ Step-by-Step Process
 *Loss: Binary Cross-Entropy
 *Metrics: IoU: 0.762 | Dice: 0.845
 
+
 ---
+## Project Demo Video
+
+demo.mp4
+
 
 
 ## 🚀 Deployment Link
