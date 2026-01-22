@@ -237,7 +237,7 @@ End-to-end ML workflow execution
 
 👤 Contributor Details
 Name	Role
-Piyush Ranjan	Machine Learning Intern
+Piyush Ranjan	Artificial Intelligence Intern
 ✅ Final Conclusion
 
 This project successfully demonstrates a complete deep learning pipeline for oil spill detection using satellite SAR imagery. It covers data preparation, model development, training, evaluation, and visualization, while also documenting real-world deployment challenges.
@@ -246,4 +246,4 @@ The work reflects both technical depth and practical ML engineering awareness.
 
 📌 Acknowledgement
 
-This project was completed under the guidance of the Springboard Mentor Program.
+This project was completed under the guidance of the Infosys Springboard Mentor Program.
