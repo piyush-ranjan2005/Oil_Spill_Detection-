@@ -1,10 +1,6 @@
+streamlit
+tensorflow==2.15.0
 numpy
-opencv-python
+opencv-python-headless
 matplotlib
-tensorflow
-albumentations
-scikit-learn
-streamlit
 pillow
-streamlit
-
