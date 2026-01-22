@@ -76,6 +76,15 @@ Validation: IoU/Dice production metrics
 Visualization: 2x6 prediction grids
 Deployment: Single-image inference
 
+🧰 Tech Stack
+
+· Python
+· TensorFlow/Keras
+· NumPy
+· OpenCV
+· Streamlit
+· Hugging Face
+
 🧠 Model Summary
 
 * Architecture: U-Net (Encoder-Decoder CNN)
