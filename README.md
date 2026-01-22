@@ -236,8 +236,8 @@ Real-world compatibility issues in MLOps
 End-to-end ML workflow execution
 
 👤 Contributor Details
-Name	Role
-Piyush Ranjan	Artificial Intelligence Intern
+Name - Piyush Ranjan	
+Role - Artificial Intelligence Intern
 ✅ Final Conclusion
 
 This project successfully demonstrates a complete deep learning pipeline for oil spill detection using satellite SAR imagery. It covers data preparation, model development, training, evaluation, and visualization, while also documenting real-world deployment challenges.
