@@ -143,10 +143,10 @@ demo.mp4
 
 The trained model is deployed as a simple web application where users can upload satellite images and view oil spill detection results.
 
-🔗 **Live Deployment:**
-👉 [https://huggingface.co/spaces/YOUR_USERNAME/oil_spill_detection](https://huggingface.co/spaces/YOUR_USERNAME/oil_spill_detection)
+https://huggingface.co/spaces/DharshiniRamachandran/oil-spill-detection/blob/main/Copy%20of%20GRADIO%20APP.ipynb
 
-*(Replace `YOUR_USERNAME` with your Hugging Face username)*
+🔗 **Live Deployment:**
+https://c22afe968ade898dea.gradio.live/
 
 ---
 📈 Performance Metrics
