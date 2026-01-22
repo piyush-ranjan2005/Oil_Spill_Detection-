@@ -43,17 +43,23 @@ def load_trained_model():
         st.error("❌ Model file not found in 'models/' folder")
         st.stop()
 
-    model = tf.keras.models.load_model(
-        model_path,
-        custom_objects={
-            "dice_loss": dice_loss,
-            "dice_coefficient": dice_coefficient
-        },
-        compile=False
-    )
-    return model
+    try:
+        model = tf.keras.models.load_model(
+            model_path,
+            compile=False,
+            custom_objects={
+                "dice_loss": dice_loss,
+                "dice_coefficient": dice_coefficient
+            }
+        )
+    except Exception as e:
+        st.error("❌ Failed to load model. Check logs.")
+        st.exception(e)
+        st.stop()
 
+    return model
 model = load_trained_model()
+
 
 # =========================================================
 # Image Upload
