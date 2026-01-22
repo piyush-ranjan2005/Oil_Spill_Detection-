@@ -9,22 +9,22 @@ trained to detect oil-contaminated regions at the pixel level, enabling accurate
 
 Objectives
 
-.Automate pixel-level detection of oil spills in SAR imagery to protect marine ecosystems and coastal economies.
+→ Automate pixel-level detection of oil spills in SAR imagery to protect marine ecosystems and coastal economies.
 
-.Achieve production-ready metrics like IoU >0.76 and Dice >0.85 using lightweight U-Net models.
+→ Achieve production-ready metrics like IoU >0.76 and Dice >0.85 using lightweight U-Net models.
 
-.Enable real-time monitoring via Google Colab pipelines for quick training and deployment.
+→ Enable real-time monitoring via Google Colab pipelines for quick training and deployment.
 ​
 
 Key Features
 
-*5-minute GPU training: Full pipeline in Google Colab with file uploads for SAR images and masks.
+→ 5-minute GPU training: Full pipeline in Google Colab with file uploads for SAR images and masks.
 
-*Lightweight U-Net: 487K parameters, TensorFlow/Keras-based, handles class imbalance with focal loss.
+→ Lightweight U-Net: 487K parameters, TensorFlow/Keras-based, handles class imbalance with focal loss.
 
-*Evaluation & Visualization: IoU/Dice metrics, prediction grids (e.g., 2x6 SAR samples), Streamlit/Hugging Face deployment.
+→ Evaluation & Visualization: IoU/Dice metrics, prediction grids (e.g., 2x6 SAR samples), Streamlit/Hugging Face deployment.
 
-*Data Handling: Supports real annotated masks, thresholding, overfitting mitigation via synthetic/real data.
+→ Data Handling: Supports real annotated masks, thresholding, overfitting mitigation via synthetic/real data.
 ​
 
 ✅ Work Completed So Far
@@ -95,6 +95,22 @@ Training: U-Net encoder-decoder optimization
 Validation: IoU/Dice production metrics
 Visualization: 2x6 prediction grids
 Deployment: Single-image inference
+
+Step-by-Step Process
+
+   Upload: SAR images + ground truth masks via Colab files.upload()
+                              ↓
+   Preprocess: Resize 256x256, normalize, binary masks
+                              ↓
+   ​Model: Lightweight U-Net (TensorFlow/Keras) with skip connections
+                              ↓
+   Train: 5 epochs, Adam optimizer, batch_size=2, GPU acceleration
+                              ↓
+   Evaluate: IoU/Dice metrics across 6+ validation SAR samples
+                              ↓
+   Visualize: Generate prediction overlay grids for README
+                              ↓
+   Deploy: Export to Streamlit app or Hugging Face Space
 
 🧰 Tech Stack
 
