@@ -20,14 +20,14 @@ st.write("Upload a satellite image to detect oil spill regions in real-time.")
 # Load Model (SAFE + CACHED)
 # -------------------------
 @st.cache_resource
-def load_model():
+def load_trained_model():
     model_path = Path("models/unet_oil_spill_model.h5")
     if not model_path.exists():
         st.error("❌ Model file not found in 'models/' folder")
         st.stop()
     return tf.keras.models.load_model(model_path, compile=False)
 
-model = load_model()
+model = load_trained_model()
 
 # -------------------------
 # Image Upload
@@ -41,13 +41,11 @@ uploaded_file = st.file_uploader(
 # Inference Pipeline
 # -------------------------
 if uploaded_file is not None:
-
     try:
-        # Load image safely using PIL
+        # Read image safely with PIL (NO OpenCV)
         image = Image.open(uploaded_file).convert("L")
         image = np.array(image)
-
-    except Exception as e:
+    except Exception:
         st.error("❌ Unable to read the uploaded image")
         st.stop()
 
@@ -63,35 +61,30 @@ if uploaded_file is not None:
         (IMG_SIZE, IMG_SIZE),
         resample=Image.BILINEAR
     )
+    image_resized = np.array(image_resized, dtype=np.float32) / 255.0
 
-    image_resized = np.array(image_resized)
-    image_norm = image_resized.astype(np.float32) / 255.0
-
-    # Shape: (1, 256, 256, 1)
-    image_input = image_norm[np.newaxis, ..., np.newaxis]
+    # Model input shape: (1, 256, 256, 1)
+    image_input = image_resized[np.newaxis, ..., np.newaxis]
 
     # -------------------------
     # Prediction
     # -------------------------
     with st.spinner("🔍 Detecting oil spill regions..."):
-        prediction = model.predict(image_input)
+        prediction = model.predict(image_input, verbose=0)
 
     mask = (prediction[0, :, :, 0] > 0.5).astype(np.uint8)
 
     # -------------------------
-    # Display Mask
+    # Display Results
     # -------------------------
     st.subheader("Predicted Oil Spill Mask")
     st.image(mask * 255, clamp=True)
 
-    # -------------------------
-    # Overlay Visualization
-    # -------------------------
     st.subheader("Overlay Visualization")
-
     fig, ax = plt.subplots(figsize=(5, 5))
     ax.imshow(image_resized, cmap="gray")
     ax.imshow(mask, cmap="jet", alpha=0.5)
     ax.axis("off")
-
     st.pyplot(fig)
+
+
