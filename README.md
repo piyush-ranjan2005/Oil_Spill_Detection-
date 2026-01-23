@@ -1,153 +1,156 @@
 🛢️ AI-Driven Oil Spill Detection Using Satellite SAR Imagery
 
-“Automated environmental monitoring using deep learning & remote sensing”
+Automated Environmental Monitoring with Deep Learning & Remote Sensing
 
-Built with Python | Powered by Deep Learning | Visualized with Streamlit
-License: Academic / Internship Project
+“Detecting environmental disasters before they escalate.”
 
-📖 Table of Contents
 
-Project Overview
+📚 Table of Contents
+
+What Is This?
 
 Why This Project Exists
 
-Key Features
+Features That Matter
 
 System Architecture
 
 Tech Stack
 
-Dataset Description
+Dataset Overview
 
-Repository Structure
+Project Structure
 
-Notebook Overview
+Notebook Walkthrough
 
-Module-Wise Implementation
+Model & Training
 
 Results & Visualizations
 
-Deployment (Status & Details)
+Deployment Status
 
-How to Run the Project
-
-Screenshots
+How to Run
 
 Key Learnings
 
 Project Goals
 
-Contributor Details
+Contributor
 
 Acknowledgments
 
-Final Notes
+Final Words
 
-🤔 Project Overview
+🤔 What Is This?
 
-Oil spills are among the most devastating environmental disasters, causing long-term damage to marine ecosystems, coastal biodiversity, and economic activities.
+This project is an AI-powered oil spill detection system that uses Satellite SAR imagery and deep learning-based image segmentation to automatically identify oil spill regions in marine environments.
 
-This project presents an AI-based oil spill detection system that uses Synthetic Aperture Radar (SAR) satellite imagery and deep learning-based image segmentation to automatically identify oil spill regions from satellite images.
+Unlike traditional manual inspection methods, this system:
 
-Unlike traditional manual monitoring methods, this system provides:
+Works in all weather conditions
 
-Faster detection
+Detects oil spills at pixel-level accuracy
 
-Objective analysis
-
-Scalable monitoring capability
+Enables scalable and automated monitoring
 
 💡 Why This Project Exists
 
-Real-world oil spill monitoring faces several challenges:
+Oil spill monitoring in the real world suffers from multiple limitations:
 
-Manual inspection of satellite images is slow and error-prone
+Manual satellite image inspection is slow and subjective
 
-Optical images are affected by clouds and lighting
+Optical images fail due to clouds and lighting
 
-Look-alike phenomena (low wind areas) confuse traditional algorithms
+Look-alike patterns confuse classical algorithms
 
-Early detection is critical but difficult
+Delayed detection causes irreversible damage
 
-This project addresses these issues by combining:
+This project solves these problems using:
 
 SAR satellite data
 
-Deep learning segmentation models
+Deep learning segmentation (U-Net)
 
-Robust preprocessing and evaluation techniques
+Robust preprocessing & evaluation
 
-✨ Key Features
-
+✨ Features That Matter
 🔍 Automated Oil Spill Detection
-Detects oil spill regions directly from satellite SAR images.
 
-🧠 Deep Learning Segmentation Model
-Uses a U-Net architecture optimized for pixel-level classification.
+Detects oil spill regions directly from SAR satellite images.
 
-🖼️ Clear Visual Outputs
-Displays:
+🧠 Deep Learning Segmentation
 
-Original satellite image
+Uses a U-Net architecture optimized for binary segmentation.
+
+🖼️ Visual Interpretability
+
+Shows:
+
+Original SAR image
 
 Ground truth mask
 
-Predicted segmentation mask
+Predicted mask
 
 Overlay visualization
 
-📊 Quantitative Evaluation
-Evaluates model performance using:
+📊 Performance Evaluation
+
+Measures model quality using:
 
 Dice Coefficient
 
-IoU (Intersection over Union)
+IoU
 
-Accuracy, Precision, Recall
+Accuracy, Precision & Recall
 
 🌐 Deployment-Ready Design
-Streamlit-based UI developed to allow interactive testing.
+
+Includes a Streamlit-based UI for interactive testing.
 
 🏗️ System Architecture
 
-High-Level Workflow
+High-level flow:
 
-Satellite SAR image input
+SAR satellite image input
 
 Image preprocessing & normalization
 
-Deep learning model inference
+U-Net model inference
 
 Segmentation mask prediction
 
 Visualization & analysis
 
 🛠️ Tech Stack
-Layer	Technology	Purpose
-Programming	Python	Core implementation
-Deep Learning	TensorFlow, Keras	Model development
-Image Processing	NumPy, PIL	SAR image handling
-Visualization	Matplotlib	Results visualization
-Deployment	Streamlit	Web interface
-Version Control	Git & GitHub	Collaboration & submission
-🗂️ Dataset Description
-Attribute	Details
-Dataset Source	Zenodo (Oil Spill Detection Dataset)
-Satellite Type	Sentinel-1 SAR
-Image Format	Grayscale SAR Images
-Annotation	Binary Segmentation Masks
-Classes	Oil Spill, Background
-Final Resolution	256 × 256
+| Layer            | Technology        | Why It’s Used              |
+| ---------------- | ----------------- | -------------------------- |
+| Programming      | Python            | Core implementation        |
+| Deep Learning    | TensorFlow, Keras | Model training & inference |
+| Image Processing | NumPy, PIL        | SAR image handling         |
+| Visualization    | Matplotlib        | Clear visual outputs       |
+| Deployment       | Streamlit         | Fast web UI                |
+| Version Control  | Git & GitHub      | Collaboration & review     |
 
-Why SAR Data?
+🗂️ Dataset Overview
+| Attribute  | Details                    |
+| ---------- | -------------------------- |
+| Source     | Kaggle (Oil Spill Dataset) |
+| Satellite  | Sentinel-1 SAR             |
+| Image Type | Grayscale SAR              |
+| Labels     | Binary segmentation masks  |
+| Classes    | Oil Spill, Background      |
+| Resolution | 256 × 256                  |
 
-Works in all weather conditions
+Why SAR?
 
-Effective for detecting surface roughness differences
+Weather-independent
 
-Suitable for maritime monitoring
+Detects surface roughness
 
-📂 Repository Structure
+Ideal for maritime monitoring
+
+📁 Project Structure
 Oil_Spill_Detection/
 │
 ├── notebooks/
@@ -158,6 +161,7 @@ Oil_Spill_Detection/
 │
 ├── screenshots/
 │   ├── sample_input_image.png
+│   ├── ground_truth_mask.png
 │   ├── predicted_mask.png
 │   └── overlay_visualization.png
 │
@@ -166,69 +170,29 @@ Oil_Spill_Detection/
 ├── README.md
 └── .gitignore
 
-📓 Notebook Overview
-Notebook	Description
-Oil_Spill_Detection_End_to_End.ipynb	Complete implementation of Modules 2–5
+📓 Notebook Walkthrough
 
-This notebook includes:
+The notebook Oil_Spill_Detection_End_to_End.ipynb covers:
 
 Data exploration
 
 Preprocessing
 
-Model development
+Model design
 
-Training & evaluation
+Training & validation
 
-Visualization of results
+Evaluation & visualization
 
-🧱 Module-Wise Implementation
-✅ Module 1: Data Collection
+🧠 Model & Training
 
-Acquired Sentinel-1 SAR satellite images
+Architecture: U-Net
 
-Obtained labeled oil spill segmentation masks
-
-Organized dataset into structured directories
-
-Verified image-mask alignment
-
-✅ Module 2: Data Exploration & Preprocessing
-
-Exploration
-
-Visualized SAR images and masks
-
-Analyzed pixel intensity distributions
-
-Studied oil vs non-oil regions
-
-Preprocessing Steps
-
-Step	Description
-Resizing	Standardized to 256 × 256
-Normalization	Pixel values scaled to [0,1]
-Channel Handling	Single-channel SAR images
-Augmentation	Flip, rotate, normalize
-✅ Module 3: Model Development (Segmentation)
-
-Implemented U-Net architecture
-
-Encoder-decoder with skip connections
-
-Designed for binary segmentation
-
-Optimized for SAR image input
-
-✅ Module 4: Training & Evaluation
-
-Training
-
-Loss Functions: Dice Loss + Binary Cross-Entropy
+Loss: Dice Loss + Binary Cross-Entropy
 
 Optimizer: Adam
 
-Validation-based tuning
+Task: Binary image segmentation
 
 Evaluation Metrics
 
@@ -240,94 +204,85 @@ Accuracy
 
 Precision & Recall
 
-✅ Module 5: Visualization of Results
+📊 Results & Visualizations
 
-Side-by-side comparison of:
+The screenshots/ folder contains:
 
-Original SAR image
+Raw SAR image
 
 Ground truth mask
 
-Predicted mask
+Model prediction
 
-Overlay visualization for clear interpretation
+Overlay visualization
 
-📊 Results & Screenshots
+These visuals clearly demonstrate the model’s segmentation quality.
 
-Screenshots demonstrating model performance are available in the screenshots/ directory.
+🚀 Deployment Status
 
-Output	Description
-Input Image	Raw SAR satellite image
-Prediction	Model-generated segmentation
-Overlay	SAR image + predicted mask
-🚀 Module 6: Deployment (Status)
-⚠️ Status: Attempted & Documented
+⚠️ Deployment: Attempted & Documented
 
-A Streamlit-based web application (app.py) was developed to:
+A Streamlit app (app.py) was built to:
 
 Upload SAR images
 
-Run trained model inference
+Run inference
 
-Display predicted oil spill masks
+Display predicted masks
 
-Show overlay visualization
+Challenge faced:
+TensorFlow/Keras version incompatibility with saved model.
 
-Deployment Challenges
+To avoid last-minute retraining, deployment was documented but not finalized.
 
-TensorFlow/Keras version incompatibility
+▶️ How to Run
 
-Legacy model serialization issues
-
-To avoid altering finalized training artifacts near submission deadline, deployment was documented but not finalized.
-
-▶️ How to Run the Project (Local)
-Step 1: Install Dependencies
 pip install -r requirements.txt
-
-Step 2: Run Streamlit App
 python -m streamlit run app.py
 
-Step 3: Test Model
-
-Upload a satellite SAR image
-
-View predicted oil spill segmentation
-
-🎯 Project Goals
-
-Automate oil spill detection from satellite imagery
-
-Reduce dependency on manual monitoring
-
-Improve environmental surveillance efficiency
-
-Demonstrate practical application of deep learning in remote sensing
+Upload a SAR image and view the predicted oil spill mask.
 
 🧠 Key Learnings
 
-SAR image characteristics & challenges
+Understanding SAR image characteristics
 
-Importance of Dice-based metrics for segmentation
+Importance of Dice-based metrics
 
 End-to-end ML pipeline design
 
-Real-world deployment constraints in ML systems
+Real-world ML deployment constraints
 
-👤 Contributor Details
-Name	Role
-Piyush Ranjan	Artificial Intelligence Intern
+🎯 Project Goals
+
+Automate oil spill detection
+
+Reduce manual monitoring effort
+
+Improve environmental response time
+
+Apply deep learning to remote sensing
+
+👤 Contributor
+
+| Name              | Role                    |
+| ----------------- | ----------------------- |
+| **Piyush Ranjan** | Machine Learning Intern |
+
 🙏 Acknowledgments
 
-Infosys Springboard Mentor Program
+Springboard Mentor Program
 
-Project Mentor for guidance & review
+Project mentor for guidance
 
-Zenodo community for dataset resources
+Kaggle community
 
 Open-source ML ecosystem
 
-🎉 Final Notes
+🎉 Final Words
 
-This project demonstrates a complete applied machine learning workflow, from satellite data analysis to model evaluation and visualization.
-It highlights both technical depth and practical engineering challenges, making it a strong real-world ML project.
+This project represents a complete real-world machine learning pipeline, combining satellite data, deep learning, evaluation, and deployment considerations.
+
+It reflects both technical depth and practical engineering challenges.
+
+
+
