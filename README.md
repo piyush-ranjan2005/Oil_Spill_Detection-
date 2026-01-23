@@ -7,24 +7,41 @@ License: Academic / Internship Project
 
 📖 Table of Contents
 
-1 Project Overview
-2 Why This Project Exists
-3 Key Features
-4 System Architecture
-5 Tech Stack
-6 Dataset Description
-7 Repository Structure
-8 Notebook Overview
-9 Module-Wise Implementation
-10 Results & Visualizations
-11 Deployment (Status & Details)
-12 How to Run the Project
-13 Screenshots
-14 Key Learnings
-15 Project Goals
-16 Contributor Details
-17 Acknowledgments
-18 Final Notes
+Project Overview
+
+Why This Project Exists
+
+Key Features
+
+System Architecture
+
+Tech Stack
+
+Dataset Description
+
+Repository Structure
+
+Notebook Overview
+
+Module-Wise Implementation
+
+Results & Visualizations
+
+Deployment (Status & Details)
+
+How to Run the Project
+
+Screenshots
+
+Key Learnings
+
+Project Goals
+
+Contributor Details
+
+Acknowledgments
+
+Final Notes
 
 🤔 Project Overview
 
@@ -106,19 +123,13 @@ Segmentation mask prediction
 Visualization & analysis
 
 🛠️ Tech Stack
-Layer	Technology	Purpose / Usage
-Programming Language	Python	Core implementation of the complete pipeline
-Deep Learning Framework	TensorFlow, Keras	Model development, training, and inference
-Model Architecture	U-Net (CNN-based)	Oil spill segmentation from SAR images
-Image Processing	NumPy, PIL	SAR image loading, preprocessing, resizing
-Data Handling	NumPy, Pandas	Dataset manipulation and numerical operations
-Visualization	Matplotlib	Visualizing masks, overlays, and results
-Satellite Data Type	Sentinel-1 SAR	Input satellite imagery for oil spill detection
-Evaluation Metrics	Dice Coefficient, IoU, Accuracy, Precision, Recall	Model performance evaluation
-Deployment (Optional)	Streamlit	Web-based interface for real-time inference
-Environment	Google Colab / Local Machine	Model training and experimentation
-Version Control	Git & GitHub	Source code management and collaboration
-
+Layer	Technology	Purpose
+Programming	Python	Core implementation
+Deep Learning	TensorFlow, Keras	Model development
+Image Processing	NumPy, PIL	SAR image handling
+Visualization	Matplotlib	Results visualization
+Deployment	Streamlit	Web interface
+Version Control	Git & GitHub	Collaboration & submission
 🗂️ Dataset Description
 Attribute	Details
 Dataset Source	Zenodo (Oil Spill Detection Dataset)
@@ -241,16 +252,14 @@ Predicted mask
 
 Overlay visualization for clear interpretation
 
-
 📊 Results & Screenshots
 
 Screenshots demonstrating model performance are available in the screenshots/ directory.
 
-Output	        Description
-Input Image	    Raw SAR satellite image
-Prediction	    Model-generated segmentation
-Overlay	        SAR image + predicted mask
-
+Output	Description
+Input Image	Raw SAR satellite image
+Prediction	Model-generated segmentation
+Overlay	SAR image + predicted mask
 🚀 Module 6: Deployment (Status)
 ⚠️ Status: Attempted & Documented
 
@@ -306,9 +315,8 @@ End-to-end ML pipeline design
 Real-world deployment constraints in ML systems
 
 👤 Contributor Details
-Name	        Role
+Name	Role
 Piyush Ranjan	Artificial Intelligence Intern
-
 🙏 Acknowledgments
 
 Infosys Springboard Mentor Program
